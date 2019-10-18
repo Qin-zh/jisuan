@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" value=""  id="num1">
+	<select>
+		<option id="jia">+</option>
+		<option id="jian">-</option>
+		<option id="cheng">&times</option>
+		<option id="chu">/</option>
+	</select>
+	<input type="text" id="num2" value="">
+	<input type="button" value="=" id="dy">
+	<input type="text" id="daan" value="">
+	<script>
+		var $=id=>document.getElementById(id);
+		var num=$('num1');
+		var num2=$('num2');
+		var dy=$('dy');
+		var daan=$('daan');
+		var jia=$('jia');
+		var jian=$('jian');
+		var cheng=$('cheng');
+		var chu=$('chu');
+		dy.onclick=function(){
+			if(jian.selected){
+		 	daan.value=(num1.value-num2.value);
+			 }
+
+			if(jia.selected){
+				daan.value=(1*num1.value+1*num2.value);
+			}
+
+
+			if(cheng.selected){
+				daan.value=(1*num1.value*1*num2.value);
+			}
+
+
+			if(chu.selected){
+				if(num2.value==0){
+					daan.value='被除数不能为0错误';
+				}else{
+				daan.value=((1*num1.value)/(1*num2.value));}
+			}
+
+			if(num1.value==''||num2.value==''){
+				daan.value='没有数据错误';
+
+			}
+			if(isNaN(num1.value)&&isNaN(num2.value)){
+				   daan.value='不是数字';
+
+			}
+		}
+
+	</script>
+</body>
+</html>
