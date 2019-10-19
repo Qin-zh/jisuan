@@ -47,22 +47,25 @@
 
 			 }else{
 
-			if(select[0].value=='+'){
+			if(select.value=='+'){
 
 			 daan.value=jia();
 			}
-			if(select[0].value=='-'){
+			if(select.value=='-'){
 			 jian();
 			}
-			if(select[0].value=='*'){
+			if(select.value=='*'){
 			 cheng();
 			}
-			if(select[0].value=='/'){
-			 	if(num2.value==0){
+			if(select.value=='/'){
+			 	if(num2.value=='0'){
 					daan.value='除数不能为0错误';
 						}else{
-				 	chu();}
+				 	    chu();
+				   }
 				 }
+
+
         }
        }
       
